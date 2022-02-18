@@ -410,7 +410,7 @@ def capture_trace(scope : scopes.ScopeTypes, target : targets.TargetTypes, plain
             import chipwhisperer as cw
             scope = cw.scope()
             scope.default_setup()
-            target = cw.target()
+            target = cw.target(scope)
             ktp = cw.ktp.Basic()
             key, pt = ktp.new_pair()
             trace = cw.capture_trace(scope, target, pt, key)
